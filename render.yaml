@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sanskari-dm-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        value: "8283878643"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
